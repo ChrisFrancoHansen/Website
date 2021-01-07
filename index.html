@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		
+		<link type="text/css" rel=stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
+
+		
+		<title>Christopher Franco Hansen</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+		
+		<style>
+		
+			body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+			
+			body, html {
+				height: 100%;
+				color: #777;
+				line-height: 1.8;
+			}
+
+			/* Create a Parallax Effect */
+			.bgimg-1, .bgimg-2, .bgimg-3, .bgimg-4, .bgimg-5 {
+			background-attachment: fixed;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			}
+
+			/* First image (Logo. Full height) */
+			.bgimg-1 {
+			background-image: url('VancouverIsland.jpg'); 
+			min-height: 100%;
+			}
+
+			/* Second image (Work) */
+			.bgimg-2 {
+			background-image: url("Sunset.jpg");
+			min-height: 400px;
+			}
+
+			/* Third image (Portfolio) */
+			.bgimg-3 {
+			background-image: url("Tech.jpg");
+			min-height: 400px;
+			}
+
+			/* Fourth image (Courses) */
+			.bgimg-4 {
+			background-image: url("Lecture.jpg");
+			min-height: 400px;
+			}
+
+			/* Fifth image (Contact) */
+			.bgimg-5 {
+				background-image: url("Contact1.jpg");
+				min-height: 400px;
+			}
+
+			above {
+				z-index: 2;
+			}
+
+			.w3-wide {
+				letter-spacing: 10px;
+			}
+			.w3-hover-opacity {
+				cursor: pointer;
+			}
+
+		</style>
+
+		
+	</head>
+	<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+	
+	<a href="#home" class="w3-bar-item w3-button" style="color: black">HOME</a>
+	
+	
+	<div class="w3-dropdown-hover w3-hide-small">
+		<a href="#about" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-user"></i> ABOUT</a>  
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#techProf" class="w3-bar-item w3-button above">Technology Proficiency</a>
+			</div>
+	</div>
+	<div class="w3-dropdown-hover w3-hide-small">
+		<a href="#work" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-laptop"></i> WORK EXPERIENCE</a>
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#Furano" class="w3-bar-item w3-button above">Furano Pacific Consulting</a>
+			  <a href="#Flag" class="w3-bar-item w3-button above">Referee Flag Football</a>
+			</div>
+	</div>
+	
+	<div class="w3-dropdown-hover w3-hide-small">
+		<a href="#project" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-th"></i> Projects</a>
+			<div class="w3-dropdown-content w3-card-4 w3-bar-block">
+			  <a href="#Rocket" class="w3-bar-item w3-button above">Control PCB</a>
+			  <a href="#Robot" class="w3-bar-item w3-button above">Robot Project</a>
+			  <a href="#LOCK" class="w3-bar-item w3-button above">Interupt Lock Game</a>
+			  
+			</div>
+	</div>
+	
+	<div class="w3-dropdown-hover w3-hide-small">
+		<a href="#Course" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-book"></i> RELEVANT COURSES</a>
+
+	</div>
+	
+	<div class="w3-dropdown-hover w3-hide-small">
+		<a href="#contact" class="w3-button w3-hide-small" style="color: black"><i class="fa fa-envelope"></i> CONTACT</a>
+
+	</div>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+	<a href="#work" class="w3-bar-item w3-button" onclick="toggleFunction()">WORK EXPERIENCE</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">TECHNICAL PROJECTS</a>
+	<a href="#courses" class="w3-bar-item w3-button" onclick="toggleFunction()">RELEVANT COURSES</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Christopher <span class="w3-hide-small">Franco</span> Hansen</span>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <p class="w3-center"><em>UVIC Computer Engineering Student</em></p>
+  <p>I am currently finishing my second year of the Bachelor of Computer Engineering Program at the University of Victoria. Within my degree, my favorite exercise has been creating logic circuits using VHDL. Another exercise I have been enjoying is converting high-level programming languages such as C++ into ARM assembly language. Besides using coding in a majority of my courses to handle Matlab and for numerical analysis, I've enjoyed taking physics course to better understand how the world works and to use this theory to improve my understanding of circuits and how the components in the hardware work.   
+  </p>
+  
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b><i class="fa fa-user w3-margin-right"></i>Christopher Hansen</b></p><br>
+      <img src="chris.png"  class="w3-round w3-image" alt="Photo of Me" width="250" height="168">
+    </div>
+
+    <div class="w3-col m6 w3-padding-large">
+	  <p>Some of my interests include playing flag football intramural, and also socializing in my free time as I play the trading card game called magic the gathering. I enjoy to strategize and compete in high-pressure games because of that I go to tournaments for Magic the gathering competing for prizes. Currently, I have started my project on designing a small autonomous robot that carries drinks inside itself around my household. Besides all of that, I enjoy to watch soccer games during my free time and going to white caps game in Vancouver.
+         </p>
+    </div>
+  </div>
+  
+  
+  <p class="w3-large w3-center" id="techProf">Proficient in the Following Technologies</p>
+  
+  
+  <p class="w3-center"><em>Click an icon to view the related experience</em></p>
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="Clogo.png" style="width:70%; padding:10px" onclick="moreInfo('Cinfo')" class="w3-hover-opacity" alt="C" name="Cinfo">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="C++logo.png" style="width:70%; padding:10px" onclick="moreInfo('C++info')" class="w3-hover-opacity" alt="C++">
+    </div>
+
+	
+	<div class="w3-col m3">
+      <img src="javalgo.png" style="width:55%; padding:10px" onclick="moreInfo('JavaInfo')" class="w3-hover-opacity" alt="Java">
+    </div>
+ 
+  
+  
+    <div class="w3-col m3">
+      <img src="python.png" style="width:70%; padding:10px" onclick="moreInfo('pythoninfo')" class="w3-hover-opacity" alt="Python">
+    </div>
+	 </div>
+	
+	
+	<div id="Cinfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience with C</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="#CSC111">CSC 111 Fundamentals of Programming with Engineering Application</a></li>
+				<li><a href="#Robot">Autonomus Robot Project</a></li>
+			</div>
+		</div>
+	</div>
+	
+	<div id="C++info" style="display:none">
+	<h3 class="w3-center">Relevant Experience with C++</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="#CSC111">CSC 111 Fundamentals of Programming with Engineering Application</a></li>
+				<li><a href="#ECE255">ECE 255 Introduction to Computer Architecture</a></li>
+
+			</div>
+		</div>
+	</div>
+	
+
+	
+	<div id="JavaInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience with Java</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="#CSC115">CSC 115 Fundametnals of Programming II</a></li>
+			</div>
+		</div>
+	</div>
+	
+	<div id="pythoninfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience with Python</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="#Math348">Math 348 Numerical Methods </a></li>
+
+			</div>
+		</div>
+	</div>
+	
+  
+  
+
+    <div class="w3-row-padding w3-center">
+	<div class="w3-col m3">
+      <img src="VHDLlogo.jfif" style="width:70%; padding:10px" onclick="moreInfo('VHDLInfo')" class="w3-hover-opacity" alt="VHDL">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="HTMLlogo.png" style="width:70%; padding:10px" onclick="moreInfo('HTMLINFO')" class="w3-hover-opacity" alt="HTML">
+    </div>
+	
+	<div class="w3-col m3">
+      <img src="MATLABlogo.jfif" style="width:90%; padding:10px" onclick="moreInfo('MatlabInfo')" class="w3-hover-opacity" alt="MATLAB">
+    </div>
+	
+	<div class="w3-col m3">
+      <img src="Autocadlogo.jfif" style="width:70%; padding:10px" onclick="moreInfo('AutoInfo')" class="w3-hover-opacity" alt="AutoCad">
+    </div>
+	
+	
+  </div>
+  
+ 
+	
+	
+	
+	<div id="VHDLInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience with VHDL</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="#ECE241">ECE 241</a></li>
+			</div>
+		</div>
+	</div>
+	
+	<div id="HTMLInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience with HTML</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="https://www.w3schools.com/default.asp">W3schools</a></li>
+
+			</div>
+		</div>
+	</div>
+	<div id="MatlabInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience with MATLAB</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="#Math110">Math 110</a></li>
+				<li><a href="#Phys215">Phys 215</a></li>
+			</div>
+		</div>
+	</div>
+	
+	<div id="AutoInfo" style="display:none">
+	<h3 class="w3-center">Relevant Experience with Autocad</h3>
+		<div style="text-align: center;">
+			<div style="display: inline-block; text-align: left;">
+				<li><a href="#Furano">Co-Op with Furano Pacific Consulting</a></li>
+			</div>
+		</div>
+	</div>
+  
+  <div class="w3-row-padding w3-center">
+    
+
+    <div class="w3-col m3">
+      <img src="MSofficelogo.jpg" style="width:70%; padding:10px" onclick="moreInfo('MS Office Suite')" class="w3-hover-opacity" alt="MS Office Suite">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="ASMlogo.png" style="width:70%; padding:10px" onclick="moreInfo('Assembler Language')" class="w3-hover-opacity" alt="Assembler Language">
+	</div>
+	
+	<div class="w3-col m3">
+      <img src="SPICELogo.jfif" style="width:70%; padding:10px" onclick="moreInfo('SPICEINFO')" class="w3-hover-opacity" alt="LtSPICE">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="MEFiSToLogo.png" style="width:70%; padding:10px" onclick="moreInfo('MEFiSToInfo')" class="w3-hover-opacity" alt="MEFiSTo">
+	</div>
+	
+
+
+  
+  
+	
+	
+</div>
+
+
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min" id="work">
+  <div class="w3-display-middle">
+	<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WORK EXPERIENCE</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="Furano">
+
+	<h2 class="w3-center">Furano Pacific Consulting</h2>
+	<h3 class="w3-center ">Junior Engineering Student</h3>
+	<p class="w3-center"><em>January 2019 - April 2019</em></p>
+	<p>During my previous co-op experience with Furano Pacific Consulting, I worked on multiple projects ranging from basic residential drawings to industrial research facilities.  I worked independently to finish rough drafts of electrical drawings which included performing site inspections, gathering data and pictures. In addition, my work included making load calculations based off my single line diagrams and producing specs for transformers and other required equipment for residential and industrial facilities. I was also responsible for gathering data regarding prices offered by different distributers and compare electrical equipment for viability. I am familiar with AutoCAD, MS Office, MS Projects and the B.C. electrical code.</p>
+	
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="Flag">
+
+	<h2 class="w3-center">University of Victoria</h2>
+	<h3 class="w3-center ">Referee for flag football</h3>
+	<p class="w3-center"><em>September 2019 - Present</em></p>
+	<p>Officiate at games, to maintain standards of play and to ensure that game rules are observed. Resolve claims of rule infractions or complaints by participants and assess any necessary penalties, according to regulations.</p>
+	
+</div>
+
+
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="project">
+  <div class="w3-display-middle">
+	<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">PROJECTS</span>
+  </div>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="Rocket">
+  <h3 class="w3-center">Uvic Rocketry</h3>
+  <p class="w3-center"><em><a href="https://www.fsaeonline.com/"> Click here to go proceed to FSAE </a></em></p>
+  <p class="w3-center"><em>For the UVIC Rocketry team i am apart of the avionics section with task to design and manage the control system. With are rocketry the control system i designed is connected to a raspberry pie, and 7 motors with.........</em></p><br>
+</div>
+
+<div class="w3-content w3-container w3-padding-64" id="nasa">
+  <h3 class="w3-center">Nasa Mini moon payload</h3>
+  <p class="w3-center"><em><a href="https://www.fsaeonline.com/"> Click here to go proceed to FSAE </a></em></p>
+  <p class="w3-center"><em>For the NASA mini moon payload competition was about .................. me and my team decided to do ...............</em></p><br>
+</div>
+
+
+
+<div class="w3-content w3-container w3-padding-64" id="Race">
+  <h3 class="w3-center">Uvic Formula Electric</h3>
+  <p class="w3-center"><em><a href="https://www.fsaeonline.com/"> Click here to go proceed to FSAE </a></em></p>
+  <p class="w3-center"><em>We are building an elecric race car to fompete at Formula SAE Electric in Californai. The plan is to have the car ready for 2021. I am currently in the tractive System. The tractive system is every part connected to the motors and the tractive system accumulators. The voltage we are dealing with are 600V 3 phase. The max power drawn from the Accumulator is 80kW.</em></p><br>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="Robot">
+  <h3 class="w3-center">Robot Project</h3>
+  
+  <p class="w3-center"><em>We had to produce an autonomus robot that detects an object and delivers are cord to it with out interfering with terrian.</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <video controls="controls" width="640" height="360" 
+       name="Video Name" src="IMG_0161.mov"></video>
+  </div>
+  <br>
+</div>
+  
+<div class="w3-content w3-container w3-padding-64" id="LOCK">
+  <h3 class="w3-center">Interupt Lock Game</h3>
+  <p class="w3-center"><em><a href="https://github.com/ChrisFrancoHansen/Interrupt-lock-game"> Click here to go proceed to Github </a></em></p>
+  <p class="w3-center"><em>The code test a sequence of buttons pushed to a set order. In progress random order generator with tester. The game is to produces a combination of lights one at a time. 
+  Once all are showned you have to hit the switches in order to proceed to the next level increasing the combination everytime.</em></p><br>
+</div>
+
+
+<!-- Fourth Parallax Image with Portfolio Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min" id="Course">
+  <div class="w3-display-middle">
+    <!--<span class="w3-xxlarge w3-text-white w3-wide">RELEVANT COURSES</span>-->
+	<span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">RELEVANT COURSES</span>
+  </div>
+</div>
+  <!-- Courses Section -->
+  <br><br>
+  <div class="w3-content w3-container w3-padding-16" id="CSC111">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CSC 111 Fundamentals of Programming with Engineering Application</h3>
+    <p>Fundamentals of computer programming using C and C++ with real-world engineering examples.
+	Topics include variables, data types, statements, control structures, functions, 
+	parameter passing mechanisms, expressions, data structures, files, pointers, storage 
+	allocation, elementary searching and sorting, recursion, encapsulation, modularity,
+	incremental development, testing and debugging.</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="csc115">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CSC 115 Fundamentals of Programming II</h3>
+    <p>Introduction of techniques, methdos, and tools for systematic development and maintenance of software
+	 systems. This included basic algorithms and data structures with fundamental concepts of object-oriented 
+	 programming. </p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="PHYS110">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">PHYS 110 Introductory Physic I</h3>
+    <p>Introductory class into physic including the topics of Newton's law; particle dynamics and curvilinear 
+	motion; force and momentum; kinetic and potential energy; circular and rotational motion; thermal
+	 physics; gravitational and electric forces.</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="Phys111">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">PHYS 111 Introductory Physic II </h3>
+    <p>Part two of Introductory Physics focus on heat engines, harmonic motion, wave motion, geometric and wave optics, and modern physic.</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="Chem150">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">CHEM 150 Engineering Chemistry</h3>
+    <p>Atomic and molecular structure; periodicity, chemical bonding; gases, liquids, and solids; phase equilibria; equilibrium; thermochemistry; chemical thermodynamics; electrochemistry.</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="ENGR141">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ENGR 141 Engineering Mechanics</h3>
+    <p>Forces, moments of forces, couples, resultants of force systems; distributed loads; hydrostatics; conditions of equilibrium and applications to particles and rigid bodies in two dimensions; analysis of statically determinate structures including beams, trusses and arches; bending moment and shear force diagrams; dry friction.</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="Phys216">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">PHYS 216 Introductory Electricity and Magnetism</h3>
+    <p>Electric and magnetic fields, Gauss' law, electric potential, capacitance, dieletrics, current and resistance, resistivity, magnetic inductance. Faraday's law of induction, Ampere's law, energy stored in electric and magnetic fields.</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="STAT260">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">STAT 260 Introduction to Probability and Statistics I</h3>
+    <p>Descriptive statistics; elementary probability theory; random variables, discrete and continuous probability distributions, expectation, joint, marginal and conditional distributions; linear functions of random variables; random sampling and sampling distributions; point and interval estimation; classical hypothesis testing and significance testing. The mathematical foundations of statistical inference will be introduced and illustrated with examples from a variety of disciplines.</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="ECE241">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ECE 241 Digital Design</h3>
+    <p style="padding-bottom:50px">Binary numbers. Boolean algebra and logic gates. Combinational circuits, gate-level minimization. Synchronous finite-state machines. Registers and counters. Synchronous sequential logic circuits. Implementation technologies.</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="ECE 250">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ECE 250 Linear Circuits I</h3>
+    <p style="padding-bottom:50px">Circuit analysis and design techniques. Resistors, sources, Kirchoff's voltage and current laws. Theorems: linearity, superposition, Thevenin, Norton. Node and loop analysis. Capacitors and inductors, series and parallel connections, stored energies. Analysis of first- and second-order circuits. Forced and natural responses. Phasors, impedance and admittance. Network theorems using phasors. Series and parallel resonance. RMS quantities, complex power. Maximum power transfer. Three-phase circuits, Y- and Delta-loads.</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="ECE255">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ECE 255 Introduction to Computer Architecture</h3>
+    <p style="padding-bottom:50px">The architecture of computer systems including concepts such as processor, memory, buses, input/output, instruction sets, interrupt processing, pipelining, performance. Families of processors, CISC, RISC. Memory organization and management including cache, virtual memory, protection. Computer arithmetic. Assembly language programming, assemblers, linkers and loaders. Hardware/software interaction.</p>
+  </div>
+
+  <div class="w3-content w3-container w3-padding-16" id="ECE330">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ECE 330 Electronic Circuits I</h3>
+    <p style="padding-bottom:50px">Nonlinear devices. Modelling and application of diodes: rectifiers, voltage regulators, waveform shaping circuits. Biasing of bipolar and field effect transistors. Small signal amplifiers. Multistage amplifiers. Nonlinear applications of transistors including digital circuits such as inverters, gates and flip-flops. Circuit design, simulation, implementation and testing.</p>
+  </div>
+  
+  <div class="w3-content w3-container w3-padding-16" id="ECE340">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ECE 340 Applied Electromagnetics and Photonics</h3>
+    <p style="padding-bottom:50px">Field concept, Maxwell's equations, power, and energy. Plane wave propagation, polarization, and reflection and transmission at material interfaces. Introduction to waveguides, antennas, and photonic structures. Engineering electromagnetics design concepts and examples with emphasis on impedance transformers and shielding structures.</p>
+  </div>
+  
+  
+  <div class="w3-content w3-container w3-padding-16" id="ECE458">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">ECE 458 Communication Networks</h3>
+    <p style="padding-bottom:50px">Introduction to communication networking principles and engineering including resource management, error control, flow control, congestion control, TCP/IP model, algorithm and protocol design for wireless and wired communication networks.</p>
+  </div>
+
+
+  
+  
+  
+  <div class="w3-content w3-container w3-padding-16" id="Phys215">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">PHYS 215 Introductory Quantum Physics</h3>
+    <p style="padding-bottom:50px">Experimental basis of quantum mechanics. Atomic structure and wave properties of matter. Time-independent Schroedinger equation - wavefunctions and probability. Introduction to the Hydrogen atom.</p>
+  </div>
+  
+    <div class="w3-content w3-container w3-padding-16" id="Math110">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">MATH 110 Matrix Algebra for Engineers</h3>
+    <p style="padding-bottom:50px">Complex numbers, matrices and basic matrix operations, vectors, linear equations, determinants, eigenvalues and eigenvectors, linear dependence and independence, orthogonality.</p>
+  </div>
+  
+    <div class="w3-content w3-container w3-padding-16" id="Math348">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">MATH 348 Numerical Methods</h3>
+    <p style="padding-bottom:50px">Error analysis (round off and truncation errors), roots of equations (bisection, Newton, secant), systems of linear equations (Gauss elimination and LU factorization), function approximation (interpolation, least squares, orthogonal polynomials), numerical differentiation, numerical integration (Newton-Cotes, Gauss), numerical solution of ordinary differential equations (Euler, Taylor, Runge-Kutta, Adams), and a selection of additional topics, such as numerical optimization, finite difference methods for linear partial differential equations, iterative methods for linear systems.</p>
+  </div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Fifth Parallax Image with Portfolio Text -->
+<div class="bgimg-5 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <!--<span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>-->
+	 <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <a href="www.linkedin.com/in/christopherfrancohansen"><i class="fa fa-linkedin fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> LinkedIn: <a href="www.linkedin.com/in/christopherfrancohansen">https://www.linkedin.com</a><br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Vancouver, BC, Canada<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 604-723-6399<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: chrisfrancohansen@gmail.com<br>
+	<a href="https://github.com/ChrisFrancoHansen"><i class="fa fa-github fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i></a> Github: <a href="https://github.com/ChrisFrancoHansen">https://github.com/ChrisFrancoHansen</a><br>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/chris.hannen.71"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+    <a href="https://www.instagram.com/dansen_hansen/"><i class="fa fa-instagram w3-hover-opacity"></i></a>
+    <a href="www.linkedin.com/in/christopherfrancohansen"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+<script>
+
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+function moreInfo(ids) {
+    var x = document.getElementById(ids);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+		blockRest(ids);
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function blockRest(ids) {
+	var list = [
+		"Cinfo", 
+		"C++info",
+		"JavaInfo",
+		"pythoninfo",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		"",
+		""
+	];
+	
+	var i;
+	for(i = 0; i < list.length; i++){
+		var x = document.getElementById(list[i]);
+		if(ids === list[i]){
+			x.style.display = "block";
+		} else{
+			x.style.display = "none";
+		}
+	}
+}
+
+</script>
+
+
+
+
+</body>
+	</body>
+	</html>
+		
